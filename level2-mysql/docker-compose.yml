@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  mysql-db:
+    image: mysql:8.0
+    container_name: fruit-mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_ROOT_PASSWORD: ""
+      MYSQL_DATABASE: fruit
+      MYSQL_USER: fruit_user
+      MYSQL_PASSWORD: fruit123
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - fruit-network
+
+  fruit-app:
+    build: .
+    container_name: fruit-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-db:3306/fruit
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ""
+    ports:
+      - "9001:9001"
+    depends_on:
+      - mysql-db
+    networks:
+      - fruit-network
+
+volumes:
+  mysql_data:
+
+networks:
+  fruit-network:
+    driver: bridge
