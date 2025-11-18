@@ -11,7 +11,7 @@
 ### 📦 Build Tool: Maven
 
 
-# 📝 Description
+## 📝 Description
 
 In this task, you will develop three independent Spring Boot applications, each with a REST API that implements complete CRUD operations (Create, Read, Update, Delete) on different entities. You will work with three different databases: H2, MySQL, and MongoDB.
 
@@ -37,7 +37,7 @@ Through these practices you will learn to:
 
 - Create a Dockerfile to package the application
 
-# 💻 Technologies Used
+## 💻 Technologies Used
 - ☕ Java 21
 
 - 🌱 Spring Boot
@@ -52,8 +52,8 @@ Through these practices you will learn to:
 
 - 📡 RESTful Web Services
 
-# 🎯 Exercise Levels
-## ⭐ Level 1 — CRUD with H2
+## 🎯 Exercise Levels
+### ⭐ Level 1 — CRUD with H2
 REST API to manage fruit stock with H2 database
 
 📋 User Stories
@@ -77,10 +77,10 @@ Delete a fruit
 
 Acceptance Criteria: HTTP 204 No Content if exists, HTTP 404 Not Found if doesn't exist
 
-## ⭐⭐ Level 2 — MySQL Refactor
+### ⭐⭐ Level 2 — MySQL Refactor
 Migration from H2 database to MySQL
 
-### 🔄 Main Changes
+🔄 Main Changes
 MySQL connection configuration in application.properties
 
 MySQL Driver dependency
@@ -92,10 +92,10 @@ Environment variables configuration
 📦 Additional Dependencies
 MySQL Driver
 
-## ⭐⭐⭐ Level 3 — MongoDB Refactor
+### ⭐⭐⭐ Level 3 — MongoDB Refactor
 Migration to NoSQL database with MongoDB
 
-### 🔄 Main Changes
+🔄 Main Changes
 MongoDB configuration in application.properties
 
 Spring Data MongoDB dependency
@@ -104,7 +104,7 @@ Change from JPA annotations to MongoDB
 
 Repository pattern with MongoRepository
 
-# 🧪 Testing Strategy
+## 🧪 Testing Strategy
 TDD Approach: Test-driven development
 
 @SpringBootTest with MockMvc for REST endpoints
@@ -113,14 +113,14 @@ Mockito for service unit tests
 
 Integration Tests for complete application testing
 
-# 🐳 Docker
+## 🐳 Docker
 Dockerfile with multi-stage build
 
 Build stage: Compilation and JAR generation
 
 Final stage: Lightweight image for production
 
-# 🚀 Deployment
+## 🚀 Deployment
 Configured port: server.port=9000
 
 Executable JAR with Maven
@@ -129,7 +129,7 @@ Embedded Tomcat
 
 Configuration through environment variables
 
-# 📚 Key Concepts Covered
+## 📚 Key Concepts Covered
 ✅ REST principles and API implementation
 
 ✅ Controllers with @RestController
@@ -158,12 +158,12 @@ Configuration through environment variables
 
 ✅ Dockerization of Spring Boot applications
 
-# 🤝 Contributions
+## 🤝 Contributions
 ### ⭐ Star the repository
 ### 🍴 Fork the project
 ### 📥 Create a pull request
 
-###🌐 Deployment
+## 🌐 Deployment
 For educational purposes only.
 
-# 🚀 Thanks for Visiting! = )
+## 🚀 Thanks for Visiting! = )
